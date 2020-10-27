@@ -1,0 +1,200 @@
+@import './header.css';
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+a{
+    color: #ffff;
+}
+a:hover{
+    color: #ffff;
+}
+ h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #343434;
+    font-size: 2rem;
+}
+
+section{
+    min-height:100vh ;
+    width: 100%;
+}
+
+/*  utilites */
+.img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.utility-center-content{
+    display: flex;
+    align-items: center;
+}
+
+.section-paragraph{
+    width: 100%;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #748182;
+    font-weight: 400;
+    margin: 1.8rem 0;
+}
+
+.btn{
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-top: 1.6rem;
+    transition: color 0.5s , background-color 0.5s;   
+}
+
+.btn-dark{
+    background: #1c1c1c;
+    color: #ffff;
+}
+.btn-dark:hover{
+    background-color: #ffff;
+    color: #1c1c1c;
+}
+.btn-outline-light{
+    color: #1c1c1c;
+}
+.btn-outline-light:hover{
+    background-color: #1c1c1c;
+    color: #ffff;
+}
+
+.bg-gray{
+    background-color: #f7f7f7;
+}
+
+.service-icon{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 1.3rem;
+    line-height: 70px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    -webkit-transition: color 0.5s , background-color 0.5s; 
+    transition: color 0.5s , background-color 0.5s; 
+}
+.service-icon:hover{
+    background-color: #1c1c1c;
+    color: #ffff; 
+}
+
+/*  end utilites */
+
+main{
+    width: 100%;
+}
+/*  section about me start */
+.section__about-me{
+    min-height: 90vh;
+}
+.section__about-me .img-container{
+    text-align: right;
+}
+.section__about-me .img-container img{
+    position: relative;
+}
+.img-container::before{
+    position: absolute;
+    content: " ";
+    background-image: url("../images/dots.png"); 
+    background-repeat: repeat;
+    width: 100%;
+    height: 70%;
+    left: -20px;
+    bottom: -30px;
+}
+.about-heading{
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.sub-tittle{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.section-paragraph span{
+    font-weight: 600;
+}
+.progress{
+    background: #f7f7f7;
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+}
+.progress-bar{
+    padding:13px ;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+}
+
+
+
+/*  section about me end */
+
+
+/*  start section services styling */
+.section__services{
+    text-align: center;
+}
+.section__services .row >div {
+    padding: 1.7rem 0.5rem 1rem;
+}
+
+.service-name{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 18px;
+}
+.section__services .row p {
+    color: #748182;
+}
+
+/*  end section services styling */
+
+
+/* resposive settings */
+@media (max-width: 575px){
+    html{
+        font-size: 12px;
+    } 
+}
+@media (min-width: 576px)and (max-width: 767px) {
+    .col-sm-6{
+        max-width: 48%;
+    }
+}
+@media (max-width: 768px){
+    .row{
+        padding: 0 3rem;
+    } 
+    .row> div{
+        margin: 2rem 0;
+    }
+
+    .row> div:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6{
+        max-width: 48%;
+    }
+    
+}
+@media (min-width: 992px) { 
+     .col-lg-4{
+         max-width: 31%;
+     }
+}
+
+@media (min-width: 1200px) { 
+
+}
