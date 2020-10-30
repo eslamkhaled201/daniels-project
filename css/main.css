@@ -16,6 +16,7 @@ a:hover{
     font-size: 2rem;
 }
 
+
 h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -29,7 +30,11 @@ section{
     -webkit-place-items: center;
     text-align: center;
 }
-
+input ,textarea{
+    outline: none;
+    border: none;
+    padding: 0.6rem 1rem;
+}
 main{
     width: 100%;
 }
@@ -70,29 +75,24 @@ h6{
     font-weight: 400;
     margin: 1.8rem 0;
 }
-
-
-
 .secondry-heading{
     position: relative;
-    margin: 1rem 0 2rem 0;
+    margin: 3rem 0 0;
     line-height: 1.1;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #1c1c1c;
     z-index: 1;
     line-height: 1.1;
 }
-
-
 .secondry-heading::before{
     position: absolute;
     content: " ";
     background-image: url("../images/dots.png"); 
     background-repeat: repeat;
     width: 100%;
-    height: 50%;
-    top: 10px;
+    height: 90%;
+    bottom: -10px;
     z-index: -1;
 }
 .btn{
@@ -124,7 +124,7 @@ h6{
     background-color: #f7f7f7;
 }
 
-.service-icon{
+.service-icon ,.contact-icon{
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
@@ -135,7 +135,7 @@ h6{
     -webkit-transition: color 0.5s , background-color 0.5s; 
     transition: color 0.5s , background-color 0.5s; 
 }
-.service-icon:hover{
+.service-icon:hover ,.contact-icon:hover{
     background-color: #1c1c1c;
     color: #ffff; 
 }
@@ -351,13 +351,13 @@ h6{
 .section__counters{
     min-height: 50vh;
 } 
-.section__counters .row{
+.section__counters .row ,.section__contact .row{
     width: 100%;
-    padding: 1rem;
+    padding: 0rem 1rem 1rem;
     justify-content: space-between;
 }
 
-.counter-container{
+.counter-container ,.contact-method{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -383,20 +383,18 @@ h6{
 
 /*  strat blog section */
 .section__blogs{
-    min-height: 120vh;
+    min-height: 110vh;
     text-align: left;
 }
 .section__blogs .container{
     max-width: 90%;
 }
 .section__blogs .row {
+    display: grid;
     margin-bottom: 2rem;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.section__blogs .row .col-lg-4{
-    max-width: 31.5%;
-    padding: 0;
+    grid-template-columns: repeat(auto-fill , minmax(19rem ,1fr));
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 .section__blogs .img-container{
     overflow: hidden;
@@ -407,14 +405,21 @@ h6{
 .section__blogs img:hover{
     transform: scale(1.1);
 }
-
+.blog{
+    display: flex;
+    flex-direction: column;
+}
 .blog-info{
     background-color: #ffff;
     padding: 2rem;
+    flex-grow: 1;
 }
 .blog-tag{
     color: #999;
     text-transform: capitalize;
+}
+.blog-tag:hover{
+    color: #999;
 }
 .section__blogs .blog-title{
     color: #343434;
@@ -440,6 +445,52 @@ h6{
 
 /* end blog section  */
 
+/* section contact start */
+.section__contact{
+    min-height: 100vh;
+}
+.contacts-row{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    column-gap: 1rem;
+}
+.contact-method i{
+    padding: 1rem;
+    font-size: 25px;
+}
+.contact-title{
+    letter-spacing: 0;
+    font-size: 1.1rem;
+}
+
+.contact-method p{
+    color: #474747;
+    font-size: 0.9rem;
+}
+.contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.contact-form input:not(:last-child){
+    width: 48%;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+.contact-form textarea{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form button{
+  padding-left: 35px;
+  padding-right: 35px;
+}
+/* section contact end */
+
 /* resposive settings */
 @media (max-width: 575px){
     html{
@@ -447,6 +498,10 @@ h6{
     } 
     .main-heading{
         font-size: 3rem;
+    }
+    .contacts-row{
+ 
+        grid-template-columns: repeat(1 , 1fr);
     }
 }
 @media (min-width: 576px)and (max-width: 767px) {
@@ -461,12 +516,18 @@ h6{
     .row{
         padding: 0 3rem;
     } 
-    .row> div{
-        margin: 2rem 0;
+    .row > div{
+        margin: 2rem 0 0;
     }
-
-    .row> div:last-child{
+    .row > div:last-child{
         margin-bottom: 0;
+    }
+    .secondry-heading{
+        margin-top: 2.5rem;
+        margin-bottom: 0px;
+    }
+    .section__blogs .row{
+        margin-top: 0px;
     }
 }
 
@@ -474,7 +535,6 @@ h6{
     .col-md-6{
         max-width: 48%;
     }
-    
 }
 @media (min-width: 992px) { 
      .col-lg-4{
