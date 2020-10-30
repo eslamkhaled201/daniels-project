@@ -360,6 +360,9 @@ h6{
     html{
         font-size: 12px;
     } 
+    .main-heading{
+        font-size: 3rem;
+    }
 }
 @media (min-width: 576px)and (max-width: 767px) {
     .col-sm-6{
