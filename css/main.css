@@ -7,6 +7,7 @@ a{
     color: #ffff;
 }
 a:hover{
+    text-decoration: none;
     color: #ffff;
 }
  h3 {
@@ -76,10 +77,11 @@ h6{
     position: relative;
     margin: 1rem 0 2rem 0;
     line-height: 1.1;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #1c1c1c;
     z-index: 1;
+    line-height: 1.1;
 }
 
 
@@ -184,9 +186,6 @@ h6{
     background-color: #1c1c1c;
     border-radius: 5px;
 }
-
-
-
 /*  section about me end */
 
 
@@ -216,13 +215,8 @@ h6{
     min-height: 90vh;
 }
 
-.categories-list {
-
-}
-
 .category-item:not(:last-child){
-    margin-right: 2rem;
-    
+    margin-right: 2rem;   
 }
 .category-item{
     color: #222;
@@ -309,21 +303,19 @@ h6{
 /* section testimonials*/
 .section__testimonials {
     min-height: 80vh;
-
 }
 .section__testimonials .container{
     max-width: 90%;
-
 }
-.carousel-item .img-container{
+.section__testimonials .carousel-item .img-container{
     margin: auto;
 }
-.carousel-item .img-container{
+.section__testimonials .img-container{
     height: 100px;
     width: 100px;
     border-radius: 50px;
 }
-.carousel-item .img-container img{
+.section__testimonials .img-container img{
     border-radius: 50px;
 }
 .carousel-indicators{
@@ -340,9 +332,9 @@ h6{
 .carousel-item p{
    font-size: 1.1rem;
 }
-.carousel-item h6{
+.section__testimonials .carousel-item  h6{
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
     margin-bottom: 0.3rem;
 }
@@ -354,6 +346,99 @@ h6{
 }
 
 /*  endd section testimonials */
+
+/* section counters start  */
+.section__counters{
+    min-height: 50vh;
+} 
+.section__counters .row{
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+}
+.counter-container i{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.counter-container h3{
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.counter-name{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+    font-weight: 600;
+}
+/* section counters end  */
+
+/*  strat blog section */
+.section__blogs{
+    min-height: 120vh;
+    text-align: left;
+}
+.section__blogs .container{
+    max-width: 90%;
+}
+.section__blogs .row {
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.section__blogs .row .col-lg-4{
+    max-width: 31.5%;
+    padding: 0;
+}
+.section__blogs .img-container{
+    overflow: hidden;
+}
+.section__blogs img{
+    transition: transform 0.5s;
+}
+.section__blogs img:hover{
+    transform: scale(1.1);
+}
+
+.blog-info{
+    background-color: #ffff;
+    padding: 2rem;
+}
+.blog-tag{
+    color: #999;
+    text-transform: capitalize;
+}
+.section__blogs .blog-title{
+    color: #343434;
+}
+.section__blogs .blog-title h6{
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    margin: 0.8rem 0;
+    line-height: 1.7;
+}
+.blog-title:hover{
+    color: #111;
+}
+.btn-more{
+    font-size: 0.9rem;
+    color: #474747;
+    border-bottom:2px solid #1c1c1c ;
+}
+.btn-more:hover{
+    color: #343434;
+}
+
+/* end blog section  */
 
 /* resposive settings */
 @media (max-width: 575px){
