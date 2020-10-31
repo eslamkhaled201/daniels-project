@@ -1,4 +1,5 @@
 @import './header.css';
+@import './footer.css';
 body{
     font-family: 'Poppins', sans-serif;
     
@@ -10,7 +11,7 @@ a:hover{
     text-decoration: none;
     color: #ffff;
 }
- h3 {
+h3{
     font-family: 'Montserrat', sans-serif;
     color: #343434;
     font-size: 2rem;
@@ -78,6 +79,7 @@ h6{
 .secondry-heading{
     position: relative;
     margin: 3rem 0 0;
+    text-transform: capitalize;
     line-height: 1.1;
     font-size: 2.5rem;
     font-weight: 900;
@@ -215,7 +217,7 @@ h6{
     min-height: 90vh;
 }
 
-.category-item:not(:last-child){
+.category-item{
     margin-right: 2rem;   
 }
 .category-item{
@@ -496,9 +498,6 @@ h6{
     html{
         font-size: 12px;
     } 
-    .main-heading{
-        font-size: 3rem;
-    }
     .contacts-row{
  
         grid-template-columns: repeat(1 , 1fr);
@@ -510,8 +509,12 @@ h6{
     }
 }
 @media (max-width: 768px){
+
     .container{
         max-width: 90%;
+    }
+    .main-heading{
+        font-size: 2.5rem;
     }
     .row{
         padding: 0 3rem;
@@ -530,7 +533,27 @@ h6{
         margin-top: 0px;
     }
 }
-
+@media (max-width: 992px){
+    .navbar{
+        padding: 0.5rem 1rem;
+    }
+    /*.navbar-toggler .navbar-toggler-icon{
+        background-image:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='20' viewBox='0 0 30 20'%3e%3cpath stroke='rgba%280, 0, 0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 5h22M4 10h22M4 15h22'/%3e%3c/svg%3e");
+    }*/
+    .navbar-toggler{
+        padding: 0.2rem 0.3rem;
+        outline: none;
+        border: none;
+    }
+    .navbar-nav{
+        background-color: #ffff;
+        
+    }
+    .navbar-dark .nav-item .nav-link {
+        color: black;
+    }
+    
+}
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-6{
         max-width: 48%;

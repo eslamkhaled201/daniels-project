@@ -1,10 +1,17 @@
-
-
 .navbar{
     z-index: 444;
-    padding-top: 2rem;
+    padding: 1rem 0;
 }
-
+.navbar-height{
+    animation: changeHieght 0.5s ease 0s 1 normal forwards running ;
+}
+@keyframes changeHieght{
+    from {height: 75.45px;}
+    to {height: 60px;}
+}
+.navbar-shadow{
+    box-shadow: 0px 1px 5px rgba(128, 128, 128, 0.479);
+}
 .navbar-brand{
     font-size: 1.4rem;
     font-weight: 700;
@@ -26,8 +33,12 @@
     padding-bottom: 1px;
     border-bottom:2px solid #ffff ;
 }
-.navbar-toggler .navbar-toggler-icon{
-   background-image:  url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='40' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+.navbar-nav{
+    text-align: center;
+}
+.navbar-nav li{
+    padding-bottom: 0.5rem;
 }
 .header__banner{
     background:  url('../images/bg.jpg');
