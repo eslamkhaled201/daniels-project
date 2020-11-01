@@ -137,7 +137,7 @@ h6{
     -webkit-transition: color 0.5s , background-color 0.5s; 
     transition: color 0.5s , background-color 0.5s; 
 }
-.service-icon:hover ,.contact-icon:hover{
+.contact-icon:hover{
     background-color: #1c1c1c;
     color: #ffff; 
 }
@@ -195,10 +195,13 @@ h6{
 .section__services{
     text-align: center;
 }
-.section__services .row >div {
+.service {
     padding: 1.7rem 0.5rem 1rem;
 }
-
+.service:hover .service-icon{
+    background-color: #1c1c1c;
+    color: #ffff; 
+}
 .service-name{
     margin-bottom: 15px;
     font-weight: 800;
