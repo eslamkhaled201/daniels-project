@@ -223,18 +223,27 @@ h6{
 .category-item{
     margin-right: 2rem;   
 }
-.category-item{
+.nav-tabs{
+    border: none;
+}
+
+.nav-tabs .nav-link{
+    border:none;
     color: #222;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
 }
-.categories-list .active{
+.nav-tabs .nav-link.active{
+    border:none;
     border-bottom: 2px solid;
     color: #222;
 }
 
-.section__works .row >div{
+.tab-pane .row >div:not(:last-child){
+    margin-right: 1rem;
+}
+.tab-pane .row >div{
     display: flex;
     justify-content: center;
     align-items: center;
