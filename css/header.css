@@ -2,13 +2,6 @@
     z-index: 444;
     padding: 1rem 0;
 }
-.navbar-height{
-    animation: changeHieght 0.5s ease 0s 1 normal forwards running ;
-}
-@keyframes changeHieght{
-    from {height: 75.45px;}
-    to {height: 60px;}
-}
 .navbar-shadow{
     box-shadow: 0px 1px 5px rgba(128, 128, 128, 0.479);
 }
